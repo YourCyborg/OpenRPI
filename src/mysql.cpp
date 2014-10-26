@@ -746,7 +746,7 @@ void save_craft_progs (void)
 	}
 }
 
-
+/*
 void update_family_clanning (DESCRIPTOR_DATA * d)
 {
 	// Here we automagically add them to the right clan if they're in there.
@@ -851,9 +851,8 @@ void update_family_clanning (DESCRIPTOR_DATA * d)
 	}
 
 }
-
-
-
+*/
+    
 // Loads the master race table containing all race defines at boot
 
 void

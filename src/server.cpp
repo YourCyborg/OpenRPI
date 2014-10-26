@@ -7,8 +7,8 @@ rpie::server::server ()
   // Set Defaults
   // Override these in your config file.
   set_config ("mysql_host", "localhost");
-  set_config ("mysql_user","blahblahblah");
-  set_config ("mysql_passwd", "blahblahblahblah");
+  set_config ("mysql_user","rpiadmin");
+  set_config ("mysql_passwd", "opensource");
 
   set_config ("engine_db", "rpi_engine");
   set_config ("player_db", "rpi_player");
@@ -19,9 +19,9 @@ rpie::server::server ()
   set_config ("server_mode", "test");
   set_config ("server_port", "4446");
 
-  set_config ("server_path_play", "/home/rpi/pp");
-  set_config ("server_path_build", "/home/rpi/bp");
-  set_config ("server_path_test", "/home/rpi/tp");
+  set_config ("server_path_play", "..");
+  set_config ("server_path_build", "..");
+  set_config ("server_path_test", "..");
   return;
 }
 
