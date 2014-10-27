@@ -70,7 +70,7 @@ You should be presented with:
 
 mysql>
 
-Note! OpenRPI has been pre-configured to use 'rpiadmin' identified with 'opensource' in MySQL. If you use anything else, you'll have an additional step to do. It's at the end.
+Note! *RPI has been pre-configured to use 'rpiadmin' identified with 'opensource' in MySQL. If you use anything else, you'll have an additional step to do. It's at the end.
 
  Here you'll type:
 
@@ -100,9 +100,9 @@ Now type:
 cd ~
 git clone https://github.com/YourCyborg/SORPI.git
 
-Now we're going to add all of the sql files in OpenRPI into those databases you just made.
+Now we're going to add all of the sql files in *RPI into those databases you just made.
 
-Load each database in Open/RPIgeneric/sql
+Load each database in *RPI/generic/sql
 
 We can do this with
 
@@ -110,7 +110,7 @@ mysql -u rpiadmin -p -h localhost DBASE < NAME.sql
 
 To do all of this, type:
 
-cd /root/OpenRPI/generic/sql
+cd /root/*RPI/generic/sql
 
 
 
@@ -149,13 +149,13 @@ It'll return options for you. Pick one. I.e.
 
 ./start-server  pp &
 
-The pp port is 4500. Connect, type in god, password changeme. No 'help' command functionality at the moment. OpenRPI/src/commands.cpp is your friend. Also, staff.cpp and olc.cpp.
+The pp port is 4500. Connect, type in god, password changeme. No 'help' command functionality at the moment. *RPI/src/commands.cpp is your friend. Also, staff.cpp and olc.cpp.
 
 If you chose a username for MySQL other than rpiadmin or it was identified by anything other than opensource:
 
 Search the files within a directory and subdirectories for a string.
-grep -rnw 'OpenRPI' -e "yourpassword"
-grep -rnw 'OpenRPI' -e "yourusername"
+grep -rnw '*RPI' -e "yourpassword"
+grep -rnw '*RPI' -e "yourusername"
 
 Make note of where it is and make the necessary changes.
 
@@ -177,14 +177,14 @@ You're also going to have to re-enable account creation, set up a mail server, a
 
 Useful Linux commands:
 copy a directory with:
-cp -r OpenRPI OpenRPI_BACKUP
+cp -r pp pp_bak
 
-Remove a directory with rm -rf OpenRPI
-copy the contents a directory with cp -r OpenRPI_BACKUP/. OpenRPI
+Remove a directory with rm -rf pp
+copy the contents a directory with cp -r tp_bak/. tp
 (source, destination, remove /. to make the folder OpenRPI_BACKUP inside OpenRPI itself versus the contents)
 
 Search the files within a directory and subdirectories for a string.
-grep -rnw 'OpenRPI' -e "BlahBlahBlah"
+grep -rnw 'tp' -e "BlahBlahBlah"
 -r is recursive, -n is line number and -w stands match the whole word. Along with these, --exclude or --include parameter could be used for efficient searching.
 
 mysqldump -u myuser --no-create-info databasename > myfile.sql
