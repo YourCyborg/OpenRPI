@@ -6,9 +6,7 @@ Read the licenses. Don't like them, don't run the MUD.
 
 Go to http://www.digitalocean.com and register an account.
 
-##Step 2, spin up your Droplet.
-
-Click the Create button on the control panel.
+##Step 2, spin up your Droplet.b
 
 Select your Hostname at the top. If you have a domain purchased somewhere, go ahead and use that domain as your hostname.
 
@@ -17,7 +15,7 @@ Select your preferred size. The smallest should be adequate.
 Select Ubuntu 14.04 x64.
 
 If you know how to use SSH keys, you can add one to your account and configure it so you don't need a password. Otherwise,
-make sure VirtIO and enable backups are checked. DigitalOCean doesn't charge for backups at the moment, so no reason not to.
+make sure VirtIO is checked. Consider enable backups. The pricing for backups is 20% of the cost of the virtual server. So if you want to enable backups for a $5/mo virtual server, the cost for backups will be $1/mo. The price for snapshots will be $0.02 per GB of snapshot storage per month.
 
 Hit Create.
 
